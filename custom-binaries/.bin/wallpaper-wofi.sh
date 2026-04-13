@@ -48,4 +48,4 @@ SELECTION=$(printf '%s\n' "${LIST[@]}" | wofi --dmenu \
 
 # Aplica wallpaper
 IMG_PATH="${MAP[$SELECTION]}"
-swww img "$IMG_PATH" --transition-type fade --transition-duration 1
+awww img "$IMG_PATH" --transition-type fade --transition-duration 1
