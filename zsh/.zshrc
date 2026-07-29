@@ -104,8 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:/home/yyax/.cargo/bin"
-export XDG_SCREENSHOTS_DIR="/home/yyax/Imagens/prints"
+export PATH="$PATH:$HOME/.cargo/bin"
+export XDG_SCREENSHOTS_DIR="$HOME/Imagens/prints"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
