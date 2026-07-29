@@ -130,10 +130,10 @@ hl.config({
 ---------------
 hl.config({
 	input = {
-		kb_layout = "br",
-		kb_variant = "",
+		kb_layout = "br, us",
+		kb_variant = "abnt2, intl",
 		kb_model = "",
-		kb_options = "",
+		kb_options = "grp:shifts_toggle",
 		kb_rules = "",
 		follow_mouse = 1,
 		sensitivity = 0,
