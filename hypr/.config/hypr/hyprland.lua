@@ -71,15 +71,15 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -----------------------
 hl.config({
 	general = {
-		gaps_in = 3,
-		gaps_out = 3,
-		border_size = 1,
+		gaps_in = 0,
+		gaps_out = 0,
+		border_size = 0,
 		resize_on_border = false,
 		allow_tearing = false,
 		layout = "dwindle",
 	},
 	decoration = {
-		rounding = 7,
+		-- rounding = 7,
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
 		blur = {
@@ -136,7 +136,7 @@ hl.config({
 		kb_options = "grp:shifts_toggle",
 		kb_rules = "",
 		follow_mouse = 1,
-		sensitivity = 0,
+		sensitivity = 0.40,
 		touchpad = {
 			natural_scroll = false,
 		},
