@@ -89,8 +89,9 @@
     "on-click": "kitty btop"
   },
   "clock": {
-    "format": " {:%H:%M %a} ",
-    "format-alt": " {0:%H:%M} {0:%F}",
+    "format": " {:%H:%M:%S %a} ",
+    "format-alt": " {0:%H:%M:%S} {0:%F}",
+    "interval": 1,
     "tooltip-format": "<span>{calendar}</span>",
     "calendar": {
       "mode": "month",
