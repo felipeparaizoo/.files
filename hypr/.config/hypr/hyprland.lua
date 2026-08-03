@@ -30,7 +30,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd(
-		"sleep 1 && awww img /home/paraizo/Imagens/Walls/earth.jpg --transition-fps 255 --transition-type outer --transition-duration 0.8"
+		"sleep 1 && awww img /home/paraizo/Imagens/Walls/medieval.gif --transition-fps 255 --transition-type outer --transition-duration 0.8"
 	)
 	hl.exec_cmd("wl-paste --type text --watch cliphist store")
 	hl.exec_cmd("wl-paste --type image --watch cliphist store")
@@ -42,6 +42,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 	hl.exec_cmd("/usr/lib/xdg-desktop-portal-hyprland")
 	hl.exec_cmd("/usr/lib/xdg-desktop-portal")
+	hl.exec_cmd("/home/paraizo/.local/app/DiscordPTB/discord-ptb --url -- %u")
 end)
 
 -------------------------------
@@ -71,15 +72,15 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -----------------------
 hl.config({
 	general = {
-		gaps_in = 0,
-		gaps_out = 0,
-		border_size = 0,
+		gaps_in = 5,
+		gaps_out = 5,
+		border_size = 1,
 		resize_on_border = false,
 		allow_tearing = false,
 		layout = "dwindle",
 	},
 	decoration = {
-		-- rounding = 7,
+		rounding = 5,
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
 		blur = {
@@ -135,6 +136,8 @@ hl.config({
 		kb_model = "",
 		kb_options = "grp:shifts_toggle",
 		kb_rules = "",
+		left_handed = true,
+		natural_scroll = true,
 		follow_mouse = 1,
 		sensitivity = 0.40,
 		touchpad = {
