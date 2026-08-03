@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=/home/paraizo/.bin/update-check.sh
-Hidden=false
-NoDisplay=false
-Name=Update Check
-Comment=Verifica atualizações do sistema ao iniciar
-X-GNOME-Autostart-enabled=true
