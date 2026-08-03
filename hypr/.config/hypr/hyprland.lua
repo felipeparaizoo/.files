@@ -42,7 +42,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 	hl.exec_cmd("/usr/lib/xdg-desktop-portal-hyprland")
 	hl.exec_cmd("/usr/lib/xdg-desktop-portal")
-	hl.exec_cmd("/home/paraizo/.local/app/DiscordPTB/discord-ptb --url -- %u")
+	hl.exec_cmd("/home/paraizo/.local/app/DiscordPTB/discord-ptb --url --start-minimized --start-inactive -- %u")
 end)
 
 -------------------------------
