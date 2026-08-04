@@ -389,13 +389,13 @@ hl.window_rule({
 hl.window_rule({
 	name = "windowrule-19",
 	match = { class = "^(Spotify)$" },
-	opacity = "0.70 0.70",
+	opacity = "1.0 1.0",
 })
 
 hl.window_rule({
 	name = "windowrule-20",
 	match = { initial_title = "^(Spotify Free)$" },
-	opacity = "0.70 0.70",
+	opacity = "1.0 1.0",
 })
 
 hl.window_rule({
