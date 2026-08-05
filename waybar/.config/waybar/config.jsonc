@@ -216,6 +216,7 @@
   "temperature": {
     "thermal-zone": 4,
     "critical-threshold": 80,
+    "interval": 1,
     "format": "{icon} {temperatureC}°C",
     "format-icons": ["", "", ""],
     "tooltip-format": "CPU: {temperatureC}°C"
