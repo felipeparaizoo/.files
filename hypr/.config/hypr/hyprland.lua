@@ -30,7 +30,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd(
-		"sleep 1 && awww img /home/paraizo/Imagens/Walls/medieval.gif --transition-fps 255 --transition-type outer --transition-duration 0.8"
+		"sleep 1 && awww img /home/paraizo/Imagens/Walls/missa.jpeg --transition-fps 255 --transition-type outer --transition-duration 0.8"
 	)
 	hl.exec_cmd("wl-paste --type text --watch cliphist store")
 	hl.exec_cmd("wl-paste --type image --watch cliphist store")
