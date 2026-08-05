@@ -21,13 +21,16 @@
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "group/tray-expander",
-    "backlight",
+    "privacy",
     "bluetooth",
     "pulseaudio",
     "network",
+    "backlight",
+    "temperature",
     "memory",
     "cpu",
     "battery",
+    "hyprland/language",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -174,7 +177,7 @@
     "format-off": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "bluetoothctl"
+    "on-click": "/home/paraizo/.config/waybar/bluetooth-toggle.sh"
   },
   "backlight": {
     "device": "intel_backlight",
@@ -187,6 +190,35 @@
       "🌖",
       "🌕"
     ]
+  },
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 10,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true
+      }
+    ]
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-pt": "PT",
+    "format-en-intl": "EN",
+    "format-pt-abnt2": "PT"
+  },
+  "temperature": {
+    "thermal-zone": 4,
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-icons": ["", "", ""],
+    "tooltip-format": "CPU: {temperatureC}°C"
   },
   
   "pulseaudio": {

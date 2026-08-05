@@ -141,12 +141,13 @@ tooltip {
 #backlight,
 #bluetooth,
 #pulseaudio,
+#temperature,
+#privacy,
+#language,
 #custom-omarchy,
 #custom-weather,
 #custom-update,
-#custom-idle-indicator,
 #custom-notification-silencing-indicator,
-#idle_inhibitor,
 #custom-screenrecording-indicator,
 #custom-updatespacman {
   min-width: 14px;
@@ -217,7 +218,6 @@ tooltip label {
   color: #a55555;
 }
 
-#custom-idle-indicator,
 #custom-notification-silencing-indicator {
   min-width: 12px;
   margin-left: 0;
@@ -226,7 +226,6 @@ tooltip label {
   padding-bottom: 0px;
 }
 
-#custom-idle-indicator.active,
 #custom-notification-silencing-indicator.active {
   color: #a55555;
 }
@@ -280,19 +279,6 @@ tooltip label {
     to {
         color: @background;
     }
-}
-
-#idle_inhibitor {
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  color: @foreground;
- }
-
-#idle_inhibitor.activated {
-  color: #178b76;
-  animation-name: blink-inhibitor;
-  animation-duration: 1s;
 }
 
 #battery.warning {
