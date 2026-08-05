@@ -60,6 +60,7 @@
     "rewrite": {
       " - ": "", // if no window is focused, a single dash is displayed, this removes it
       "(.*?) - Chromium - chromium": "   $1 ",
+      "(.*) - Brave-browser": "   $1 ",
       "(.*chrome)...(.*)": "   $1 ",
       "(.*) - Obsidian - .* - obsidian": "   $1 ",
       "(.*nvim)...(.*)": "   $2 ",
@@ -79,12 +80,12 @@
     }
   },
  "cpu": {
-    "interval": 2,
+    "interval": 1,
     "format": " {usage:02}%",
     "on-click": "kitty btop"
   },
   "memory": {
-    "interval": 2,
+    "interval": 1,
     "format": " {percentage:02}%",
     "on-click": "kitty btop"
   },
@@ -219,17 +220,19 @@
     "spacing": 12
   },
   "mpris": {
-    "format": "{player_icon} {artist} - {title}",
+    "format": "{player_icon} {title} - {artist}",
     "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
-    "max-length": 35,
+    "max-length": 55,
     "interval": 1,
     "player-icons": {
       "default": "⏸",
+      "spotify": " ",
+      "brave": " ",
       "mpv": "🎵"
     },
     "status-icons": {
       "paused": "▶"
     },
-    "ignored-players": ["firefox", "chromium", "brave"]
+    "ignored-players": ["firefox", "chromium"]
   },
 }
