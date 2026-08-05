@@ -177,7 +177,7 @@
     "format-off": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "/home/paraizo/.config/waybar/bluetooth-toggle.sh"
+    "on-click": "$HOME/.files/custom-binaries/.bin/bluetooth-toggle.sh"
   },
   "backlight": {
     "device": "intel_backlight",
