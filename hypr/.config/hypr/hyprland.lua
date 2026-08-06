@@ -136,8 +136,8 @@ hl.config({
 		kb_model = "",
 		kb_options = "grp:shifts_toggle",
 		kb_rules = "",
-		left_handed = true,
-		natural_scroll = true,
+		left_handed = false,
+		natural_scroll = false,
 		follow_mouse = 1,
 		sensitivity = 0.40,
 		touchpad = {
