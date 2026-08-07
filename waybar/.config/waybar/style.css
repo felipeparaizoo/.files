@@ -264,12 +264,6 @@ tooltip label {
   animation-direction: alternate;
 }
 
-#custom-cava {
-  margin: 0px 3px 0px 3px;
-  padding: 0 2px;
-  font-size: 14px;
-}
-
 @keyframes cover-pulse {
   from { opacity: 1; }
   to { opacity: 0.55; }

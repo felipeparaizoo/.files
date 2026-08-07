@@ -22,7 +22,6 @@
   "modules-right": [
     "group/tray-expander",
     "privacy",
-    "custom/cava",
     "bluetooth",
     "pulseaudio",
     "network",
@@ -271,10 +270,5 @@
     "on-click": "$HOME/.config/waybar/scripts/mpris-notify.sh",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
-  },
-  "custom/cava": {
-    "exec": "$HOME/.config/waybar/scripts/cava-bar.sh",
-    "format": "{}",
-    "tooltip": false
   },
 }
