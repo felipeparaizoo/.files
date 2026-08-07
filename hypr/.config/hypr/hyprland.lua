@@ -52,6 +52,13 @@ end)
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("XDG_SESSION_TYPE", "wayland")
+local has_nvidia = os.execute("lspci -nn 2>/dev/null | grep -qiE 'VGA.*\\[.*nvidia|3D.*\\[.*nvidia'") == 0
+if has_nvidia then
+	hl.env("LIBVA_DRIVER_NAME", "nvidia")
+	hl.env("GBM_BACKEND", "nvidia-drm")
+	hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
+	hl.env("NVD_BACKEND", "direct")
+end
 hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 hl.env("QT_QPA_PLATFORM", "wayland")
 hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
