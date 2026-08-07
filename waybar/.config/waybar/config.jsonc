@@ -15,13 +15,14 @@
   },
   "group/left3": {
     "orientation": "inherit",
-    "modules": ["image#cover", "mpris"]
+    "modules": ["image#cover", "custom/mpris"]
   },
   "modules-left": ["group/left2", "group/left3"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "group/tray-expander",
     "privacy",
+    "custom/cava",
     "bluetooth",
     "pulseaudio",
     "network",
@@ -256,24 +257,24 @@
     "exec": "$HOME/.config/waybar/scripts/mpris-cover.sh",
     "size": 22,
     "interval": 5,
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
   },
-  "mpris": {
-    "format": "{title}",
-    "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
-    "max-length": 55,
+  "custom/mpris": {
+    "exec": "$HOME/.config/waybar/scripts/mpris-progress.sh",
     "interval": 1,
-    "tooltip-format": "{status_icon} {player_icon} <b>{title}</b>\n{artist}\n{album}",
+    "return-type": "json",
+    "max-length": 55,
+    "escape": true,
     "on-click": "$HOME/.config/waybar/scripts/mpris-notify.sh",
-    "player-icons": {
-      "default": "⏸",
-      "spotify": " ",
-      "brave": " ",
-      "mpv": "🎵"
-    },
-    "status-icons": {
-      "paused": "▶"
-    },
-    "ignored-players": ["firefox", "chromium"]
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+  "custom/cava": {
+    "exec": "$HOME/.config/waybar/scripts/cava-bar.sh",
+    "format": "{}",
+    "tooltip": false
   },
 }

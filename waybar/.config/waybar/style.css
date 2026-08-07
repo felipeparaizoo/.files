@@ -236,7 +236,7 @@ tooltip label {
 }
 
 /* Specific animation Module */
-#mpris {
+#custom-mpris {
   margin: 0px 8px 0px 8px;
   padding: 0 6px;
   animation: repeat;
@@ -247,8 +247,32 @@ tooltip label {
     animation-direction: alternate;
 }
 
+#custom-mpris.paused {
+  color: grey;
+}
+
 #image#cover {
   margin: 0;
+  transition: all 0.2s ease;
+}
+
+#image#cover:hover {
+  animation-name: cover-pulse;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+#custom-cava {
+  margin: 0px 3px 0px 3px;
+  padding: 0 2px;
+  font-size: 14px;
+}
+
+@keyframes cover-pulse {
+  from { opacity: 1; }
+  to { opacity: 0.55; }
 }
 
 #image#cover.empty {
