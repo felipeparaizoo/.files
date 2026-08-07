@@ -15,7 +15,7 @@
   },
   "group/left3": {
     "orientation": "inherit",
-    "modules": ["mpris"]
+    "modules": ["image#cover", "mpris"]
   },
   "modules-left": ["group/left2", "group/left3"],
   "modules-center": ["hyprland/window"],
@@ -252,11 +252,19 @@
     "icon-size": 12,
     "spacing": 12
   },
+  "image#cover": {
+    "exec": "$HOME/.config/waybar/scripts/mpris-cover.sh",
+    "size": 22,
+    "interval": 5,
+    "tooltip": false
+  },
   "mpris": {
-    "format": "{player_icon} {title} - {artist}",
+    "format": "{title}",
     "format-paused": "<span color='grey'>{status_icon} {dynamic}</span>",
     "max-length": 55,
     "interval": 1,
+    "tooltip-format": "{status_icon} {player_icon} <b>{title}</b>\n{artist}\n{album}",
+    "on-click": "$HOME/.config/waybar/scripts/mpris-notify.sh",
     "player-icons": {
       "default": "⏸",
       "spotify": " ",
