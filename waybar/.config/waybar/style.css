@@ -1,5 +1,7 @@
-@define-color background #1e1e2e;
-@define-color foreground #ffffff;
+@import "colors/colors.css";
+
+@define-color background @bg2;
+@define-color foreground @fg;
 
 /* --- Global-Settings ---*/
 
@@ -39,29 +41,12 @@ tooltip {
 
  /* --- Sub-Groups ---*/
 
-#left1{
-  border-radius: 26px;
-  border: 1px solid alpha(@foreground, 0.3);
-  margin: 0px 8px 3px 8px;
-  background-color: @background;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-}
-
 #left2{
   border-radius: 26px;
   border: 1px solid alpha(@foreground, 0.3);
   margin: 0px 8px 3px 8px;
   background-color: @background;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-}
-
-#left3{
-  border-radius: 26px;
-  border: 1px solid alpha(@foreground, 0.3);
-  margin: 0px 8px 3px 8px;
-  background-color: @background;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
-  padding: 2px 0 2px 8px;
 }
 
  /* --- Modules ---*/
@@ -148,13 +133,7 @@ tooltip {
 #pulseaudio,
 #temperature,
 #privacy,
-#language,
-#custom-omarchy,
-#custom-weather,
-#custom-update,
-#custom-notification-silencing-indicator,
-#custom-screenrecording-indicator,
-#custom-updatespacman {
+#language {
   min-width: 14px;
   margin: 1px 3px 1px 3px;
   padding: 0 3px;
@@ -170,15 +149,6 @@ tooltip {
 
 #bluetooth {
   padding-right: 0px;
-}
-
-#custom-weather {
-  padding-right: 0px;
-}
-
-#custom-update {
-  padding-left: 0px;
-  padding-right: 4px;
 }
 
 #tray {
@@ -214,31 +184,16 @@ tooltip label {
     font-weight: normal;
 }
 
-#custom-voxtype {
-  min-width: 12px;
-  margin: 0 0 0 2.5px;
-}
-
-#custom-voxtype.recording {
-  color: #a55555;
-}
-
-#custom-notification-silencing-indicator {
-  min-width: 12px;
-  margin-left: 0;
-  margin-right: 0;
-  font-size: 12px;
-  padding-bottom: 0px;
-}
-
-#custom-notification-silencing-indicator.active {
-  color: #a55555;
-}
-
 /* Specific animation Module */
 #custom-mpris {
-  margin: 0px 8px 0px 8px;
-  padding: 0 6px;
+  background-color: @background;
+  border: 1px solid alpha(@foreground, 0.3);
+  border-left: none;
+  border-radius: 0 26px 26px 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+  margin: 0 8px 3px 0;
+  min-height: 22px;
+  padding: 2px 10px 2px 4px;
   animation: repeat;
 	animation-name: blink;
 	animation-duration: 3s;
@@ -252,7 +207,13 @@ tooltip label {
 }
 
 #image#cover {
-  margin: 0;
+  background-color: @background;
+  border: 1px solid alpha(@foreground, 0.3);
+  border-right: none;
+  border-radius: 26px 0 0 26px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 1);
+  margin: 0 0 3px 8px;
+  padding: 2px 0 2px 6px;
   transition: all 0.2s ease;
 }
 
@@ -270,42 +231,19 @@ tooltip label {
 }
 
 #image#cover.empty {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
   margin: 0;
   min-width: 0;
   min-height: 0;
+  padding: 0;
 }
-
-#custom-screenrecording-indicator {
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  color: transparent;
-}
-
-#custom-screenrecording-indicator.active {
-  color: #eb7087;
-  animation-name: blink-recording;
-  animation-duration: 0.5s;
-}
-
-@keyframes blink-recording {
-    to {
-        color: @background;
-    }
-}
-
-
 
 @keyframes blink {
     to {
         color: #4a4a4a;
         
-    }
-}
-
-@keyframes blink-inhibitor {
-    to {
-        color: @background;
     }
 }
 

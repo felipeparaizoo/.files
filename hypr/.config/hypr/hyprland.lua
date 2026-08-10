@@ -28,7 +28,6 @@ local colorPicker = "hyprpicker"
 hl.on("hyprland.start", function()
 	hl.exec_cmd("/usr/bin/dunst")
 	hl.exec_cmd("waybar")
-	hl.exec_cmd("/home/paraizo/.config/waybar/scripts/mpris-watch.sh")
 	hl.exec_cmd("awww-daemon")
 	hl.exec_cmd(
 		"sleep 1 && awww img /home/paraizo/Imagens/Walls/missa.jpeg --transition-fps 255 --transition-type outer --transition-duration 0.8"

@@ -1,7 +1,8 @@
 {
   "reload_style_on_change": true,
   "position": "top",
-  "mod": "dock",
+  "layer": "top",
+  "exclusive": true,
   "margin-top": 2,
   "height": 27,
   "margin-left": 5,
@@ -9,15 +10,11 @@
   "margin-bottom": 2,
 
 
-"group/left2": {
+  "group/left2": {
     "orientation": "inherit",
     "modules": ["hyprland/workspaces"]
   },
-  "group/left3": {
-    "orientation": "inherit",
-    "modules": ["image#cover", "custom/mpris"]
-  },
-  "modules-left": ["group/left2", "group/left3"],
+  "modules-left": ["group/left2", "image#cover", "custom/mpris"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "group/tray-expander",
@@ -63,23 +60,23 @@
     "rewrite": {
       " - ": "", // if no window is focused, a single dash is displayed, this removes it
       "(.*?) - Chromium - chromium": "   $1 ",
-      "(.*) - Brave-browser": "   $1 ",
-      "(.*chrome)...(.*)": "   $1 ",
-      "(.*) - Obsidian - .* - obsidian": "   $1 ",
-      "(.*nvim)...(.*)": "   $2 ",
+      "(.*) - Brave-browser": "    $1 ",
+      "(.*) - (.*chrome)": "    $1 ",
+      "(.*) - Obsidian - .* - obsidian": "    $1 ",
+      "(.*) - (.*nvim)": "    $1 ",
       "(.*code) - (.*)": " 󰨞  $1 ",
       "^.*btop( .*|$)": " 󰧨 BTOP $1",
       "^.*cmatrix( .*|$)": " 󰘨 MATRIX $1 ",
-      "(.*) - Spotify": "  $1 ",
+      "(.*) - Spotify": "   $1 ",
       "(.*) - com.mitchellh.ghostty": " 󰊠 $1 ",
-      "(.*) - Alacritty": "   $1 ",
+      "(.*) - Alacritty": "    $1 ",
       "(.*) - BeeperTexts": " 󰻞  $1 ",
-      "(.*Discord)...(.*).. (.*)": "   $2 ",
+      "(.*) - (.*discord)": "    $1 ",
       "(.*) - org.gnome.Nautilus": " 󰣆  $1 ",
-      "(.*) - fish": "   [$1] ",
-      "(.*Steam)...(.*)": "   $1",
-      "(.*imv)...(.*).. (.*)": "   $2",
-      "(.*) - com.obsproject.Studio": "  $1 "
+      "(.*) - fish": "    [$1] ",
+      "(.*) - (.*Steam)": "    $1",
+      "(.*) - (.*imv)": "    $1 ",
+      "(.*) - com.obsproject.Studio": "   $1 "
     }
   },
  "cpu": {
