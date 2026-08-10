@@ -12,32 +12,35 @@ window#waybar {
 }
 
 window#waybar > box {
-    background: transparent;
+    background: rgba(38, 38, 38, 0.8);
+    border: none;
 }
 
 /* ---- Workspaces ---- */
 #workspaces {
-    background: #262626;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    margin: 4px 6px;
     padding: 0 6px;
-    margin: 4px 0;
 }
 
 #workspaces button {
-    padding: 0 6px;
+    padding: 0 8px;
     color: #5a5a5a;
     background: transparent;
     font-size: 14px;
-    transition: color 0.2s;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
 }
 
 #workspaces button.active {
-    color: #ffffff;
+    color: #1c1c2b;
+    background: #e5e9f0;
 }
 
 #workspaces button:hover {
     color: #e0e0e0;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: none;
 }
 
@@ -50,11 +53,12 @@ window#waybar > box {
 #mpris,
 #clock,
 #tray {
-    background: #262626;
-    border-radius: 8px;
+    background: transparent;
+    border-radius: 0;
     padding: 0 12px;
-    margin: 4px 2px;
+    margin: 0;
     color: #d4d4d4;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* ---- Cores por módulo ---- */
@@ -102,6 +106,7 @@ window#waybar > box {
 /* ---- Tray ---- */
 #tray {
     padding: 0 8px;
+    border-left: none;
 }
 
 #tray > .passive {
@@ -111,6 +116,4 @@ window#waybar > box {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #b3b3b3;
-    border-radius: 8px;
 }
-
