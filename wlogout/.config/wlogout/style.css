@@ -6,12 +6,12 @@
 }
 
 window {
-    background-color: #11111b;
+    background-color: #111111;
     /* border-radius: 10px; */
 }
 
 button {
-    background-color: #11111b;
+    background-color: #111111;
     border-style: solid;
     /* border-width: 2px; */
     border-radius: 50px;
@@ -23,11 +23,11 @@ button {
 
 button:active,
 button:hover {
-    background-color: #cdd6f4;
+    background-color: #ffffff;
 }
 
 button:focus {
-    background-color: #cdd6f4;
+    background-color: #ffffff;
 }
 
 #lock {
@@ -36,7 +36,7 @@ button:focus {
 
 #lock:hover {
     background-image: image(url("../assets/wlogout/assets/lock-hover.png"), url("/usr/local/share/wlogout/icons/lock.png"));
-    color: #11111b;
+    color: #111111;
 }
 
 #logout {
@@ -45,7 +45,7 @@ button:focus {
 
 #logout:hover {
     background-image: image(url("../assets/wlogout/assets/logout-hover.png"), url("/usr/local/share/wlogout/icons/logout.png"));
-    color: #11111b;
+    color: #111111;
 }
 
 #suspend {
@@ -54,7 +54,7 @@ button:focus {
 
 #suspend:hover {
     background-image: image(url("../assets/wlogout/assets/sleep-hover.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
-    color: #11111b;
+    color: #111111;
 }
 
 #shutdown {
@@ -63,7 +63,7 @@ button:focus {
 
 #shutdown:hover {
     background-image: image(url("../assets/wlogout/assets/power-hover.png"), url("/usr/local/share/wlogout/icons/shutdown.png")); 
-    color: #11111b;
+    color: #111111;
 }
 
 #reboot {
@@ -72,17 +72,17 @@ button:focus {
 
 #reboot:hover {
     background-image: image(url("../assets/wlogout/assets/restart-hover.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-    color: #11111b;
+    color: #111111;
 }
 
 #exit {
     background-image: image(url("../assets/wlogout/assets/restart.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-    background-color: #11111b;
+    background-color: #111111;
 
 }
 
 #exit:hover {
     background-image: image(url("../assets/wlogout/assets/restart-hover.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
-    color: #11111b;
-    background-color: #cdd6f4;
+    color: #111111;
+    background-color: #ffffff;
 }

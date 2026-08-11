@@ -14,14 +14,14 @@ window {
 
 #input {
     margin-bottom: 20px;
-    color: #8a0000; /* cor da seleção */
+    color: #ffffff; /* cor da seleção */
 }
 
 #entry {
     margin-bottom: 15px;
-    color: #ffffff;
+    color: #d4d4d4;
 }
 
 #entry:selected {
-    color: #8a0000;
+    color: #ffffff;
 }
