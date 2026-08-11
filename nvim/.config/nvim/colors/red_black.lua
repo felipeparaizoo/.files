@@ -1,5 +1,5 @@
 -- Red/Black/White theme
--- Palette: ~55% black, ~23% red, ~22% white
+-- Monochrome base with red accents for wayfinding
 -- No colorscheme dependency — pure highlight groups
 
 local M = {}
@@ -9,11 +9,11 @@ local colors = {
     black0 = "#0a0a0a", -- pure bg
     black1 = "#111111", -- slightly lighter bg
     black2 = "#1a1a1a", -- bg elements (statusline, popups)
-    black3 = "#313131", -- borders, separators
+    black3 = "#2e2e2e", -- borders, separators
     black4 = "#333333", -- comments, muted
     black5 = "#444444", -- subtle accents
 
-    -- Reds
+    -- Reds (accent)
     red0 = "#8b0000", -- dark red (dimmed)
     red1 = "#aa0000", -- medium red
     red2 = "#cc1111", -- primary red
@@ -21,9 +21,9 @@ local colors = {
     red4 = "#ff3333", -- hot red (errors, bold)
 
     -- Whites / light grays
-    white0 = "#aaaaaa", -- muted text
-    white1 = "#cccccc", -- normal text
-    white2 = "#e8e8e8", -- bright text
+    white0 = "#a8a8a8", -- muted text
+    white1 = "#cfcfcf", -- normal text
+    white2 = "#e6e6e6", -- bright text
     white3 = "#ffffff", -- pure white (headings, current)
 
     -- Specials
