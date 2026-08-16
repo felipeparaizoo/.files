@@ -52,7 +52,8 @@ window#waybar > box {
 #pulseaudio,
 #mpris,
 #clock,
-#tray {
+#tray,
+#battery {
     background: transparent;
     border-radius: 0;
     padding: 0 12px;
@@ -116,4 +117,8 @@ window#waybar > box {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #b3b3b3;
+}
+
+#battery {
+  color: #8c8c8c
 }

@@ -22,7 +22,8 @@
         "network",
         "pulseaudio",
         "disk",
-        "tray"
+        "tray",
+        "battery"
     ],
 
     "hyprland/workspaces": {
@@ -94,6 +95,47 @@
       "format": "󰋊 {percentage_used}%",
       "path": "/",
       "tooltip": false,
-    }
+    },
+
+    "battery": {
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{capacity}% {icon}",
+    "format-charging": "{capacity}% {icon}",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "󰂅 {capacity}%",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {timeTo}",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {timeTo}",
+    "interval": 5,
+    "states": {
+    "warning": 20,
+    "critical": 10
+      }
+    },
   },
  ]
