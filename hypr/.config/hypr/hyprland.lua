@@ -474,6 +474,25 @@ hl.window_rule({
 	no_blur = 1,
 })
 
+-- Focus origin app when its notification is clicked
+-- Messaging apps
+hl.window_rule({
+	name = "focus-on-activate-messaging",
+	match = {
+		class = "^(vesktop|discord|TelegramDesktop|org.telegram.desktop|slack|Signal|whatsapp|com.whatsapp|WhatsApp|Microsoft.Teams|teams|Element|element)$",
+	},
+	focus_on_activate = true,
+})
+
+-- Browsers (links coming from notifications)
+hl.window_rule({
+	name = "focus-on-activate-browsers",
+	match = {
+		class = "^(brave-browser|Thorium-browser|firefox|zen|google-chrome|chromium)$",
+	},
+	focus_on_activate = true,
+})
+
 ---- LAYER RULES ----
 hl.layer_rule({
 	name = "layerrule-1",
