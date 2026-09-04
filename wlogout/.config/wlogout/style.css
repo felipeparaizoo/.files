@@ -1,8 +1,9 @@
 * {
     font-family: JetBrains Mono, Symbols Nerd Font;
     font-size: 24px;
-    transition-property: background-color;
-    transition-duration: 0.7s;
+    transition-property: all;
+    transition-duration: 0.35s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 window {
@@ -19,6 +20,21 @@ button {
     background-position: center;
     background-size: 15%;
     margin: 15px;
+    background-color: rgba(38, 38, 38, 0.6);
+    transition-property: all;
+    transition-duration: 0.35s;
+    transition-timing-function: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+button:hover {
+    background-size: 20%;
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.45), 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+button:active {
+    background-size: 20%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7), 0 2px 8px rgba(0, 0, 0, 0.6);
+    transition-duration: 0.1s;
 }
 
 button:active,
