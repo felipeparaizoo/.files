@@ -82,15 +82,22 @@ hl.config({
 		layout = "dwindle",
 	},
 	decoration = {
-		rounding = 5,
+		rounding = 10,
 		active_opacity = 1.0,
-		inactive_opacity = 1.0,
+		inactive_opacity = 0.95,
+		shadow = {
+			enabled = true,
+			range = 25,
+			render_power = 3,
+			color = 0x05050a33,
+		},
 		blur = {
 			enabled = true,
-			size = 2,
-			passes = 1,
+			size = 5,
+			passes = 2,
 			new_optimizations = true,
-			vibrancy = 0.1696,
+			vibrancy = 0.25,
+			vibrancy_darkness = 0.25,
 			ignore_opacity = true,
 		},
 	},
@@ -99,26 +106,39 @@ hl.config({
 	},
 })
 
-hl.curve("wind", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1.05 } } })
-hl.curve("winIn", { type = "bezier", points = { { 0.1, 1.1 }, { 0.1, 1.1 } } })
-hl.curve("winOut", { type = "bezier", points = { { 0.3, -0.3 }, { 0, 1 } } })
+-- Curvas premium: springs (estilo Apple) + beziers
+hl.curve("snappi", { type = "spring", mass = 1, stiffness = 200, dampening = 12 })
+hl.curve("snappy", { type = "spring", mass = 1, stiffness = 150, dampening = 15 })
+hl.curve("bouncy", { type = "spring", mass = 1, stiffness = 120, dampening = 10 })
+hl.curve("softy", { type = "spring", mass = 1, stiffness = 90, dampening = 17 })
 hl.curve("liner", { type = "bezier", points = { { 1, 1 }, { 1, 1 } } })
-hl.curve("soft", { type = "bezier", points = { { 0.4, 0.2 }, { 0.2, 1 } } })
-hl.curve("overshoot", { type = "bezier", points = { { 0.5, 0.9 }, { 0.1, 1.1 } } })
-hl.curve("pop", { type = "bezier", points = { { 0.1, 0.9 }, { 0.1, 1.1 } } })
+hl.curve("wind", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1.05 } } })
+hl.curve("winOut", { type = "bezier", points = { { 0.3, -0.3 }, { 0, 1 } } })
 
-hl.animation({ leaf = "windows", enabled = true, speed = 6, bezier = "wind", style = "slide" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 6, bezier = "overshoot", style = "popin 75%" })
-hl.animation({ leaf = "windowsOut", enabled = true, speed = 5, bezier = "winOut", style = "slide" })
-hl.animation({ leaf = "windowsMove", enabled = true, speed = 5, bezier = "wind", style = "slide" })
-hl.animation({ leaf = "fade", enabled = true, speed = 7, bezier = "soft" })
-hl.animation({ leaf = "fadeDim", enabled = true, speed = 7, bezier = "soft" })
-hl.animation({ leaf = "fadeIn", enabled = true, speed = 7, bezier = "soft" })
-hl.animation({ leaf = "fadeOut", enabled = true, speed = 7, bezier = "soft" })
-hl.animation({ leaf = "fadeSwitch", enabled = true, speed = 7, bezier = "soft" })
-hl.animation({ leaf = "border", enabled = true, speed = 2, bezier = "liner" })
+-- Animações premium
+hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "wind" })
+hl.animation({ leaf = "windows", enabled = true, speed = 5, spring = "snappy", style = "slide" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 4, spring = "bouncy", style = "popin 60%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 3, bezier = "winOut", style = "popin 60%" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 5, spring = "snappi", style = "slide" })
+hl.animation({ leaf = "fade", enabled = true, speed = 6, spring = "softy" })
+hl.animation({ leaf = "fadeDim", enabled = true, speed = 6, spring = "softy" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 6, spring = "softy" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 6, spring = "softy" })
+hl.animation({ leaf = "fadeSwitch", enabled = true, speed = 6, spring = "softy" })
+hl.animation({ leaf = "border", enabled = true, speed = 4, bezier = "liner" })
 hl.animation({ leaf = "borderangle", enabled = true, speed = 30, bezier = "liner", style = "loop" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "wind", style = "slide" })
+hl.animation({ leaf = "layers", enabled = true, speed = 4, spring = "softy", style = "fade" })
+hl.animation({ leaf = "layersIn", enabled = true, speed = 4, spring = "softy", style = "fade" })
+hl.animation({ leaf = "layersOut", enabled = true, speed = 3, bezier = "liner", style = "fade" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "wind", style = "slidefade 17%" })
+hl.animation({ leaf = "workspacesIn", enabled = true, speed = 6, bezier = "wind", style = "slidefade 17%" })
+hl.animation({ leaf = "workspacesOut", enabled = true, speed = 6, bezier = "winOut", style = "fade" })
+hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 6, spring = "snappy", style = "slidevert 38%" })
+hl.animation({ leaf = "specialWorkspaceIn", enabled = true, speed = 6, spring = "snappy", style = "slidevert 38%" })
+hl.animation({ leaf = "specialWorkspaceOut", enabled = true, speed = 4, spring = "snappy", style = "slidevert 38%" })
+hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, spring = "snappy" })
+hl.animation({ leaf = "monitorAdded", enabled = true, speed = 7, spring = "snappy" })
 
 hl.config({
 	dwindle = {
@@ -459,6 +479,7 @@ hl.layer_rule({
 	name = "layerrule-1",
 	match = { namespace = "tofi" },
 	ignore_alpha = 0,
+	blur = true,
 })
 
 hl.layer_rule({
