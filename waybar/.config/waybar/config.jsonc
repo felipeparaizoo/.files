@@ -39,6 +39,10 @@
     "cpu": {
         "interval": 1,
         "format": "󰻠 {usage}%",
+        "format-warning": "󰻠 {usage}%",
+        "states": {
+            "warning": 85
+        },
         "tooltip": false,
         "on-click": "kitty btop"
     },
