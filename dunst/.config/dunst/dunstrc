@@ -1,0 +1,84 @@
+[global]
+    follow = mouse
+    indicate_hidden = yes
+    notification_limit = 4
+
+    offset = (14, 14)
+
+    width = (320, 420)
+    height = (0, 300)
+
+    separator_height = 0
+    separator_color = frame
+    gap_size = 4
+
+    padding = 12
+    horizontal_padding = 14
+    text_icon_padding = 10
+    frame_width = 1
+
+    frame_color = "#ffffff26"
+    separator_color = frame
+
+    sort = yes
+    idle_threshold = 120
+    font = SF Pro Display, JetBrainsMono Nerd Font 11
+    line_height = 2
+    markup = full
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    word_wrap = yes
+    stack_duplicates = false
+    hide_duplicate_count = true
+
+    show_indicators = no
+
+    min_icon_size = 0
+    max_icon_size = 44
+
+    icon_position = left
+    icon_corner_radius = 7
+
+    icon_path = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/24x24/devices/:/usr/share/icons/Papirus-Dark/24x24/actions/:/usr/share/icons/Papirus-Dark/24x24/animations/:/usr/share/icons/Papirus-Dark/24x24/apps/:/usr/share/icons/Papirus-Dark/24x24/categories/:/usr/share/icons/Papirus-Dark/24x24/places/
+
+    dmenu = /usr/bin/wofi -p dunst:
+    browser = /usr/bin/firefox --new-tab
+
+    title = Dunst
+    class = Dunst
+
+    corner_radius = 18
+    timeout = 6
+    ellipsize = middle
+
+    mouse_left_click = do_action, remove_current
+    mouse_middle_click = close_current
+    mouse_right_click = close_all
+
+    progress_bar = true
+    progress_bar_horizontal_alignment = left
+    progress_bar_height = 5
+    progress_bar_min_width = 220
+    progress_bar_max_width = 390
+    progress_bar_frame_width = 0
+    progress_bar_corner_radius = 2
+    progress_bar_corners = all
+
+[urgency_low]
+    background = "#1c1c1ebf"
+    foreground = "#ffffffb3"
+    frame_color = "#ffffff1a"
+    highlight = "#ffffffb3"
+
+[urgency_normal]
+    background = "#1c1c1ed9"
+    foreground = "#ffffff"
+    frame_color = "#ffffff26"
+    highlight = "#ffffff"
+
+[urgency_critical]
+    background = "#242427fa"
+    foreground = "#ffffff"
+    frame_color = "#ffffff66"
+    highlight = "#ffffff"
