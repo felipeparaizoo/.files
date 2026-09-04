@@ -4,7 +4,7 @@ border-width = 0
 outline-width = 0
 padding-left = 33%
 padding-top = 33%
-result-spacing = 25
+result-spacing = 12
 num-results = 5
 
 font = JetBrainsMono Nerd Font
@@ -14,5 +14,19 @@ text-color = #cfcfcf
 
 prompt-text = " : "
 
-background-color = #111111d9
-selection-color = #ffffff
+background-color = #11111188
+
+default-result-background = #ffffff0d
+default-result-background-padding = 8px
+default-result-background-corner-radius = 10
+alternate-result-background = #ffffff05
+
+selection-background = #ffffff
+selection-background-padding = 8px
+selection-background-corner-radius = 10
+selection-color = #111111
+selection-match-color = #111111
+
+text-cursor-style = bar
+text-cursor-thickness = 3
+text-cursor-corner-radius = 3
